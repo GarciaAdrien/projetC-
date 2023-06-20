@@ -13,5 +13,5 @@ public abstract class Scooter
     this.couleur = couleur;
     this.puissance = puissance;
   }
-  public abstract void afficheCaracteristiques();
+  public abstract void Construit();
 }
