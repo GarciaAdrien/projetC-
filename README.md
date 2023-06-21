@@ -28,27 +28,27 @@ Nous allons prendre en exemple le cas d'une société qui vend des véhicules en
 # Premiere grande famille de design pattern : Les patterns de construction
 Autre site pour la définition des design patterns : https://goprod.bouhours.net/?page=pattern&pat_id=10 
 ### Le pattern Abstract Factory
-![Alt text](resources/patterns.png)
+![Alt text](/resources/pattern.png)
 Le but étant de fabriquer des objets regroupés en famile sans avoir a connaitre les classes cibles destinées a la fabrication de ces objets 
 
 # Diagramme UML
-![Alt text](resources/patterns2.png)
+![Alt text](/resources/pattern2.png)
 On créer une instance de FabriqueVéhicule() qui implémentera les interfaces des autres méthodes
 
 ### Le pattern Builder
-![Alt text](resources/patterns3.png)
+![Alt text](/resources/pattern3.png)
 Le but étant d'abstraire la construction d'objets complexes de leur implémentation de sorte qu'un client puisse créer des objets complexes sans avoir a se préocupper des différences d'implémentation
 
 ###  Le pattern Factory Method
-![Alt text](resources/patterns4.png)
+![Alt text](/resources/pattern4.png)
 Le but étant d'introduire une méthode abstraite de création d'objet en la reportant aux sous-classes concretes la création effective
 
 ###  Le pattern Singleton
-![Alt text](resources/patterns4.png)
+![Alt text](/resources/pattern4.png)
 Le but étant d'avoir une classe instanciée une seule fois dans le projet et de fournir une méthode de classe qui permet de fournir cette instance unique
 
 ### Le pattern Prototype
-![Alt text](resources/patterns5.png)
+![Alt text](/resources/pattern5.png)
 Le but étant d'avoir une instance d'un prototype (objet existant) d'une classe. Ces prototypes sont "clonables"
 
 # Deuxième grande famille de design pattern : Les patterns de structuration
@@ -64,5 +64,9 @@ structuration signifie que le premier objet détient l’interface vis-à-vis de
 second objet qui lui gère la composition et n’a aucune interface avec les clients externes.
 
 ### Le pattern Adapter
-![Alt text](resources/patterns6.png)
+![Alt text](/resources/pattern6.png)
 Le but étant d'adapter l'interface d'une classe afin qu'elle puisse intéragir avec un client. En temps normal, les classes ne pourraient pas fonctionner ensemble en raison d'incompatibilité
+
+### Le pattern Decorator
+![Alt text](/resources/pattern7.png)
+Le but étant d'ajouter des fonctionnalisés supplémentaires a un objet pour étendre les fonctionnalités sans modifier son interface
