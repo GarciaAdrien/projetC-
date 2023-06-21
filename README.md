@@ -50,3 +50,19 @@ Le but étant d'avoir une classe instanciée une seule fois dans le projet et de
 ### Le pattern Prototype
 ![Alt text](resources/patterns5.png)
 Le but étant d'avoir une instance d'un prototype (objet existant) d'une classe. Ces prototypes sont "clonables"
+
+# Deuxième grande famille de design pattern : Les patterns de structuration
+L’objectif des patterns de structuration est de faciliter l’indépendance de l’interface d’un objet ou d’un
+ensemble d’objets vis-à-vis de son implantation. Dans le cas d’un ensemble d’objets, il s’agit aussi de
+rendre cette interface indépendante de la hiérarchie des classes et de la composition des objets.
+En fournissant les interfaces, les patterns de structuration encapsulent la composition des objets,
+augmentant le niveau d’abstraction du système à l’image des patterns de création qui encapsulent la
+création des objets. Les patterns de structuration mettent en avant les interfaces.
+L’encapsulation de la composition est réalisée non pas en structurant l’objet lui-même mais en transférant
+cette structuration à un second objet. Celui-ci est intimement lié au premier objet. Ce transfert de
+structuration signifie que le premier objet détient l’interface vis-à-vis des clients et gère la relation avec le
+second objet qui lui gère la composition et n’a aucune interface avec les clients externes.
+
+### Le pattern Adapter
+![Alt text](resources/patterns6.png)
+Le but étant d'adapter l'interface d'une classe afin qu'elle puisse intéragir avec un client. En temps normal, les classes ne pourraient pas fonctionner ensemble en raison d'incompatibilité
