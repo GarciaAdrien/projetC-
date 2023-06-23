@@ -20,6 +20,7 @@ Nous allons prendre en exemple le cas d'une société qui vend des véhicules en
 
 # Premiere grande famille de design pattern : Les patterns de construction
 Autre site pour la définition des design patterns : https://goprod.bouhours.net/?page=pattern&pat_id=10 
+
 ### Le pattern Abstract Factory
 ![Alt text](/resources/pattern.png)
 
@@ -44,6 +45,36 @@ Le but étant d'introduire une méthode abstraite de création d'objet en la rep
 ![Alt text](/resources/pattern4.png)
 
 Le but étant d'avoir une classe instanciée une seule fois dans le projet et de fournir une méthode de classe qui permet de fournir cette instance unique
+
+Exemple de singleton:
+
+```
+    public class Vendeur
+    {
+        private static Vendeur _instance = null;
+
+        private Vendeur() {
+        }
+
+        public static Vendeur Instance()
+        {
+            if (_instance == null)
+                _instance = new Vendeur();
+            return _instance;
+        }
+    }
+    static void Main(string[] args)
+    {
+        Vendeur vendeur1 = Vendeur.Instance();
+        Vendeur vendeur2 = Vendeur.Instance();
+
+        vendeur1.sales = 10;
+        if(vendeur2.sales == vendeur1.sales)
+            Console.WriteLine("Singleton fonctionnel");
+        else
+            Console.WriteLine("Singleton non fonctionnel");
+    }
+```
 
 ### Le pattern Prototype
 ![Alt text](/resources/pattern5.png)
@@ -79,3 +110,55 @@ Le but étant d'ajouter des fonctionnalisés supplémentaires a un objet pour é
 -l'utilisation de l'heritage n'est pas une option car la hierarchie d'objets est deja trop complexe
 
 ### Le pattern Bridge
+Version 1
+![Alt text](/resources/pattern8.png)
+Version 2
+![Alt text](/resources/pattern8-2.png)
+
+Le but étant de  dé-coupler le comportement de l'interface de l'implémentation de l'objet.
+
+### Le pattern Composite
+Version 1
+![Alt text](/resources/pattern9.png)
+
+Version 2
+![Alt text](/resources/pattern9-2.png)
+
+le but étant d'organiser les objets en arborescence pour les traiter comme des entités individuelles.
+
+### Le pattern Decorator
+Version 1
+![Alt text](/resources/pattern10.png)
+
+Version 2
+![Alt text](/resources/pattern10-2.png)
+le but étant d'ajouter de manière dynamique des fonctionnalités supplémentaires à un objet sans avoir à modifier son interface
+
+
+# Troisième grande famille de design pattern : Les patterns de comportement
+Les patrons comportementaux s’occupent des algorithmes et de la répartition des responsabilités entre les objets.
+
+### Le pattern Chain Of Responsability
+![Alt text](/resources/pattern11.png)
+
+Version 1
+![Alt text](/resources/pattern11-1.png)
+
+Version 2
+![Alt text](/resources/pattern11-2.png)
+
+Le but étant de traiter une demande de manière hiérarchique. Chaque élément peut traiter la demande ou de la transmettre a l'élément suivant de la chaîne.
+
+### Le pattern Command
+
+Il permet de transformer une requête en objet
+
+### Le pattern Iterator
+
+Version 1
+![Alt text](/resources/pattern12.png)
+
+Version 2
+![Alt text](/resources/pattern12-2.png)
+
+Le but étant d'accéder aux éléments d'une liste, d'un tableau ou d'une autre collection un par un, sans se soucier de la façon dont ils sont organisés en interne
